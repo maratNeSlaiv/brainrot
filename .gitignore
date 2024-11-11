@@ -1,0 +1,7 @@
+venv
+.env
+media
+results
+dall-e
+output_video.mp4
+onyx_cooked
