@@ -160,6 +160,7 @@ def build_whole_story(prompt):
         characters = characters_look(characters)
         characters = replace_non_standard_chars(characters)
         characters = ast.literal_eval(characters)
+        print("CHARACTERS:", characters)
         finalised = []
         for dalle_prompt in story:
             changed_prompt = change_prompt_based_on_character(dalle_prompt, characters)

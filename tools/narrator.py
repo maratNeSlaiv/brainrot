@@ -4,27 +4,32 @@ load_dotenv()
 import os
 from tools.generate_id import generate_random_hash
 
-def onyx_for_voicing(voice_line, filename = 'output.mp3'):
+def voicing(voice_line, narrator_voice, filename = 'output.mp3'):
+    if narrator_voice in ['alloy', 'echo', 'fable', 'onyx', 'nova', 'shimmer']:
+        model_voice = narrator_voice
+    else:
+        model_voice = 'onyx'
+        
     client = OpenAI(
         api_key=os.environ.get("OPENAI_API_KEY"),
         )
 
     response = client.audio.speech.create(
         model="tts-1",
-        voice="onyx",
+        voice=model_voice,
         input=voice_line,
     )
 
     response.stream_to_file(filename)
 
-def voice_the_narrative(NARRATOR):
+def voice_the_narrative(NARRATOR, narrator_voice):
     unique_id = generate_random_hash()
     audio_folder = f"media/onyx_cooked/{unique_id}"
     os.makedirs(audio_folder, exist_ok=True)
 
     for index, scene_narrative in enumerate(NARRATOR, start=1): 
         filename = f"{audio_folder}/narrative_{index}.mp3"
-        onyx_for_voicing(scene_narrative, filename = filename)
+        voicing(scene_narrative, narrator_voice = narrator_voice, filename = filename)
 
     return audio_folder
 
