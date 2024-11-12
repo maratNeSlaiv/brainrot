@@ -1,9 +1,9 @@
-from plot_generator.plot_generate_from_scratch import build_whole_story
+from tools.plot_generate_from_scratch import build_whole_story
 from tools.generate_id import generate_random_hash
 import os
-from sounding.narrator import onyx_for_voicing
-from sounding.narrator import voice_the_narrative
-from scene_generator.dalle_scenes import create_the_scenes
+from tools.narrator import onyx_for_voicing
+from tools.narrator import voice_the_narrative
+from tools.dalle_scenes import create_the_scenes
 from tools.combine_audio_with_generated_images import create_slideshow_with_audio
 
 if __name__ == '__main__':

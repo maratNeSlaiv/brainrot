@@ -19,7 +19,7 @@ def stack_two_videos(video_path_1, video_path_2, subs=False):
     final_clip = clips_array([[clip2_resized], [clip1]])
 
     unique_id = generate_random_hash()
-    media_folder = f"media/{unique_id}"
+    media_folder = f"media/adapted_/{unique_id}"
     os.makedirs(media_folder, exist_ok=True)
     output_path = f"{media_folder}/final_video.mp4"
     final_clip.write_videofile(output_path)
