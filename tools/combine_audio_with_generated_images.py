@@ -45,6 +45,6 @@ def create_slideshow_with_audio(image_folder, audio_folder, output_filename="out
     final_clip.write_videofile(output_filename, codec='libx264', fps=24)
 
 if __name__ == '__main__':
-    image_folder = '/Users/maratorozaliev/Desktop/brainrot/dall-e/2275ead719b42ead/'
-    audio_folder = '/Users/maratorozaliev/Desktop/brainrot/onyx_cooked/302de7f17a37345b/'
+    image_folder = '/path/to/generated_images_folder'
+    audio_folder = '/path/to/generated_audios_folder'
     create_slideshow_with_audio(image_folder, audio_folder)
