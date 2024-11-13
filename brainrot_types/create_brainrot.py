@@ -1,7 +1,6 @@
 from tools.plot_generate_from_scratch import build_whole_story
 from tools.generate_id import generate_random_hash
 import os
-from tools.narrator import onyx_for_voicing
 from tools.narrator import voice_the_narrative
 from tools.dalle_scenes import create_the_scenes
 from tools.combine_audio_with_generated_images import create_slideshow_with_audio
@@ -10,10 +9,8 @@ import sys
 def make_ai_generated_story(prompt, narrator_voice = 'onyx'):
     FINALISED, NARRATOR = build_whole_story(prompt=prompt)
 
-    for i, j in zip(FINALISED, NARRATOR):
-        print()
-        print('story:', i)
-        print('narrator:', j)
+    for index, scene in enumerate(FINALISED, start = 1):
+        print(f"scene #{index}: {scene}")
     
     go_further = input("Are we good with the narrative and prompts for dalle? type 'YES' in that case:")
     if go_further == "YES":

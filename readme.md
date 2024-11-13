@@ -14,8 +14,8 @@ Get the project working:
 3) create '.env' file and add OPENAI_API_KEY = 'your_api_key'
 4) run brainrot_types/create_brainrot.py:
     * run 'export PYTHONPATH=/path/to/the/project/root' in case python can't see modules
-5) It takes approximately 2 minutes to generate a video, you can see the generated video in results/hash_printed_inconsole
-    * First load may take more time, because of some models' weights installation.
+5) It takes approximately 15-20 seconds to generate a scenario. Type 'YES' if everything in scenario looks fine. It will take another 1 or 2 minutes to generate pictures, voice the narrative and create a slideshow video in results/some_hash.
+    * If you want to apply subs: it will take more time on the first get_subs.py run, because of a load of the whisper model, which weighs around 3 gb.
 
 Each generated video costs around ~30 cents (3.5 cents for every generated image, 1-2 cents for narrator voicing, and < 1 cent for scenario generation). I believe after some time, generation of images will be much cheaper. 
 
@@ -23,3 +23,6 @@ Check out literally the first video I have generated when project was done (migh
 
 
 <img src="brainrot_video.png" alt="qr for the video" width="300" />
+
+
+Place that may be optimized is sending calls to DALL-E from tools/dalle_scenes.py. Usage of asyncronous programming will speed up the process several times.
