@@ -10,4 +10,4 @@ Python 3.11.10
 5) It takes approximately 2 minutes to generate a video, you can see the generated video in results/hash_printed_inconsole
 
 Check literally the first video I have generated when project was done (might be low quality because i store it at some free, but noname, video hosting platform)
-![qr for the video](brainrot_video.png)
+<img src="brainrot_video.png" alt="qr for the video" width="300" />
