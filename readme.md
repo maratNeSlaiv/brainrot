@@ -19,10 +19,4 @@ Get the project working:
 
 Each generated video costs around ~30 cents (3.5 cents for every generated image, 1-2 cents for narrator voicing, and < 1 cent for scenario generation). I believe after some time, generation of images will be much cheaper. 
 
-Check out literally the first video I have generated when project was done (might be low quality because i store it at some free, but noname, video hosting platform).
-
-
-<img src="brainrot_video.png" alt="qr for the video" width="300" />
-
-
 Place that may be optimized is sending calls to DALL-E from tools/dalle_scenes.py. Usage of asyncronous programming will speed up the process several times.
